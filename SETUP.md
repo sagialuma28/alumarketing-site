@@ -15,18 +15,23 @@ Register `alumarketing.co.il` for one year. Keep the registrar login; the DNS re
 in step 3 are entered there. Nothing else is needed from the registrar (no hosting, no
 e-mail, no "site builder").
 
-## 2. Publish the site (Claude, after Sagi's yes)
+## 2. Publish the site (Sagi creates the repository, Claude pushes)
 
-GitHub Pages under Sagi's GitHub account, a public repository `alumarketing-site`:
+GitHub Pages under Sagi's GitHub account. The GitHub CLI is not installed on this machine,
+so the empty repository is created in the browser (1 minute):
+
+1. Sagi: https://github.com/new > name `alumarketing-site`, **Public**, no README, Create.
+2. Claude pushes (Git Credential Manager is already signed in from the agency repo):
 
 ```bash
 cd "C:/Users/SagiA/Claude.new/alumarketing-site"
-gh repo create sagialuma28/alumarketing-site --public --source . --push
-gh api -X POST repos/sagialuma28/alumarketing-site/pages -f build_type=legacy -f "source[branch]=main" -f "source[path]=/"
+git remote add origin https://github.com/sagialuma28/alumarketing-site.git
+git push -u origin main
 ```
 
-Then in the repository: Settings > Pages > Custom domain `alumarketing.co.il`, tick
-"Enforce HTTPS" once the certificate is issued (up to an hour after DNS resolves).
+3. Sagi: repository > Settings > Pages > Source "Deploy from a branch", branch `main`,
+   folder `/ (root)`, Save. Custom domain `alumarketing.co.il`, Save. Tick "Enforce HTTPS"
+   once the certificate is issued (up to an hour after the DNS in step 3 resolves).
 
 ## 3. DNS at the registrar (Sagi, 5 minutes, values are exact)
 
