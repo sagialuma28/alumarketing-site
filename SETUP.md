@@ -21,7 +21,9 @@ GitHub Pages under Sagi's GitHub account. The GitHub CLI is not installed on thi
 so the empty repository is created in the browser (1 minute):
 
 1. Sagi: https://github.com/new > name `alumarketing-site`, **Public**, no README, Create.
-2. Claude pushes (Git Credential Manager is already signed in from the agency repo):
+2. Claude pushes (Git Credential Manager is already signed in from the agency repo). First the
+   four privacy edits in `Alumarketing-Claude/Alumarketing/deploy/api-basic-access/form_answers.md`
+   step 8, so the page matches what the code does:
 
 ```bash
 cd "C:/Users/SagiA/Claude.new/alumarketing-site"
@@ -72,12 +74,15 @@ https://console.cloud.google.com/auth/branding?project=alumarketing-agency-autom
 | Developer contact | alumasagi82@gmail.com |
 
 Audience: user type **External**, publishing status **In production** (the docs require both
-for the Basic access review). Save.
+for the Basic access review). Save. Then **Verify branding**, and **Publish branding** once it
+passes (a pass expires after 7 days unpublished).
 
 ## 6. Apply for Basic access (Sagi, 2 minutes)
 
 https://console.cloud.google.com/google/ads-apis/overview?project=alumarketing-agency-automation
-> Upgrade access level > Apply for access. Review up to 10 business days.
+> Upgrade access level > Apply for access. The review is automated and takes minutes (Google's
+access-levels page, 25 Sep 2026). Billing check, fallback answers and what to do on a refusal:
+`Alumarketing-Claude/Alumarketing/deploy/api-basic-access/form_answers.md`.
 `bin/am_credcheck.py` in the agency repo probes the level every morning and the growth pack
 switches its Keyword Planner section on by itself.
 
