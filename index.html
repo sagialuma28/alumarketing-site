@@ -24,6 +24,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&family=Heebo:wght@400;500;700&display=swap">
+<script>
+  // Google Tag Manager. Set the container id (GTM-XXXXXXX) and every tag lives in the container:
+  // GA4 today, Google Ads and Meta when needed. The page pushes generate_lead, whatsapp_click and email_click.
+  window.GTM_ID = "";
+  window.dataLayer = window.dataLayer || [];
+  (function (w, d, s, l, i) { if (!i) return; w[l] = w[l] || []; w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = "https://www.googletagmanager.com/gtm.js?id=" + i; f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", window.GTM_ID);
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -783,6 +792,20 @@
     if (CONTACT.whatsapp) { window.open(href, "_blank", "noopener"); } else { window.location.href = href; }
   }
 
+  // Measurement events for Tag Manager (GA4, and later Google Ads and Meta).
+  function track(event, data) {
+    var payload = { event: event };
+    for (var k in (data || {})) payload[k] = data[k];
+    (window.dataLayer = window.dataLayer || []).push(payload);
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    var href = a.getAttribute("href") || "";
+    if (href.indexOf("wa.me") >= 0 || href.indexOf("whatsapp") >= 0) track("whatsapp_click", { location: a.id || a.className || "link" });
+    else if (href.indexOf("mailto:") === 0) track("email_click", { location: "contact" });
+  });
+
   document.querySelectorAll("[data-cta]").forEach(function (a) {
     a.setAttribute("href", link(greeting));
     if (CONTACT.whatsapp) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); }
@@ -845,7 +868,7 @@
     var fields = { "name": name, "phone": phone, "email": email || "-", "site": site || "-", "interest": interest, "budget": budget, "page": location.href };
     if (email) fields["replyto"] = email;
     sendLead(fields, "פנייה חדשה מהאתר: " + name)
-      .then(function () { showSent(); })
+      .then(function () { track("generate_lead", { form: "contact", interest: interest, budget: budget }); showSent(); })
       .catch(function () {
         btn.disabled = false; btn.textContent = label;
         if (note) { note.textContent = "השליחה מהדף לא הצליחה. נפתחה לכם הודעה מוכנה, אפשר לשלוח אותה כמו שהיא."; note.className = "err"; }
