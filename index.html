@@ -262,7 +262,7 @@
   form .btn[disabled] { opacity: .7; cursor: wait; transform: none; }
   form small { color: var(--muted); font-size: 12.5px; text-align: center; }
   form small.err { color: #B42318; }
-  .honey { position: absolute; left: -9999px; width: 0; height: 0; opacity: 0; }
+  .honey { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); opacity: 0; white-space: nowrap; }
   .sent { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 36px 26px; text-align: center; box-shadow: var(--shadow); }
   .sent[hidden] { display: none; }
   .sent .ck { width: 58px; height: 58px; border-radius: 50%; background: var(--green-soft); color: var(--green); display: grid; place-items: center; margin: 0 auto 14px; }
