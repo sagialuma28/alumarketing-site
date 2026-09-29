@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alumarketing.co.il/sitemap.xml

@@ -2,90 +2,791 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Alumarketing | ניהול קמפיינים ממומנים</title>
-<meta name="description" content="Alumarketing: ניהול קמפיינים ממומנים בגוגל ובמטא ללקוחות בישראל ובאוסטרליה, עם מערכת אוטומציה פנימית שקוראת נתונים, מנטרת תקציבים ומבצעת אופטימיזציה מאושרת.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d4ed8'/%3E%3Ctext x='32' y='43' font-size='34' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'%3EA%3C/text%3E%3C/svg%3E">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alumarketing | ניהול חשבונות פרסום, עם התמחות ב-Google Ads</title>
+<meta name="description" content="יותר מכירות ולידים מכל שקל בפרסום. ניהול חשבונות פרסום לחנויות אונליין ולעסקי שירות, עם התמחות ב-Google Ads: יעד במספרים, עבודה יומיומית על החשבון וליווי אישי. פגישת ייעוץ ללא עלות.">
+<link rel="canonical" href="https://alumarketing.co.il/">
+<meta name="theme-color" content="#1A6DF0">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="Alumarketing">
+<meta property="og:title" content="Alumarketing | יותר מכירות ולידים מכל שקל בפרסום">
+<meta property="og:description" content="ניהול חשבונות פרסום עם התמחות ב-Google Ads. יעד במספרים, עבודה יומיומית על החשבון, ליווי אישי. פגישת ייעוץ ללא עלות.">
+<meta property="og:url" content="https://alumarketing.co.il/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231A6DF0'/%3E%3Crect x='13' y='36' width='9' height='15' rx='2.5' fill='white'/%3E%3Crect x='26.5' y='27' width='9' height='24' rx='2.5' fill='white'/%3E%3Crect x='40' y='17' width='9' height='34' rx='2.5' fill='white'/%3E%3Ccircle cx='52' cy='12' r='4.5' fill='%23FFC626'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&family=Heebo:wght@400;500;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Alumarketing",
+  "url": "https://alumarketing.co.il/",
+  "description": "ניהול חשבונות פרסום לחנויות אונליין ולעסקי שירות, עם התמחות ב-Google Ads.",
+  "email": "alumasagi82@gmail.com",
+  "founder": {"@type": "Person", "name": "Sagi Aluma"},
+  "knowsAbout": ["Google Ads", "Google Shopping", "Performance Max", "Merchant Center", "Conversion tracking", "Meta Ads"],
+  "inLanguage": ["he", "en"]
+}
+</script>
 <style>
-  :root { --ink: #16213a; --muted: #5b6478; --line: #e3e7ef; --accent: #1d4ed8; --bg: #ffffff; --soft: #f5f7fb; }
+  /* Layout: light page, 1120px column, one soft-tinted section in every other slot.
+     Rubik for headings and numbers, Heebo for body. Google-family blue, yellow, green, red
+     as accents; yellow doubles as a highlighter under key words. RTL throughout. */
+  :root {
+    --bg: #FFFFFF; --bg-soft: #F4F7FC; --bg-tint: #EDF3FF;
+    --ink: #101828; --ink-2: #344054; --muted: #667085; --line: #E4E9F2; --line-2: #D0D7E4;
+    --blue: #1A6DF0; --blue-deep: #0B4FBF; --blue-soft: #E7F0FF;
+    --green: #16A34A; --green-soft: #E3F7EA;
+    --yellow: #FFC626; --yellow-soft: #FFF3C4;
+    --red: #E5484D; --red-soft: #FDE8E8;
+    --font: "Heebo", "Rubik", "Segoe UI", Arial, sans-serif;
+    --font-head: "Rubik", "Heebo", "Segoe UI", Arial, sans-serif;
+    --radius: 22px;
+    --shadow: 0 18px 50px rgba(16, 24, 40, .10);
+    color-scheme: light;
+  }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Segoe UI", Arial, "Noto Sans Hebrew", sans-serif; line-height: 1.6; }
-  header { border-bottom: 1px solid var(--line); }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-  .top { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .brand { font-weight: 700; font-size: 20px; color: var(--ink); text-decoration: none; }
-  .brand span { color: var(--accent); }
-  nav a { color: var(--muted); text-decoration: none; margin-inline-start: 18px; font-size: 15px; }
-  nav a:hover { color: var(--accent); }
-  h1 { font-size: 34px; line-height: 1.25; margin: 48px 0 12px; }
-  h2 { font-size: 22px; margin: 40px 0 10px; }
-  p { margin: 0 0 14px; }
-  .lead { font-size: 18px; color: var(--muted); }
-  ul { padding-inline-start: 20px; margin: 0 0 14px; }
-  li { margin-bottom: 6px; }
-  .card { background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; margin: 18px 0; }
-  .en { direction: ltr; text-align: left; }
-  .en h2 { text-align: left; }
-  .contact a { color: var(--accent); text-decoration: none; }
-  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
-  footer a { color: var(--muted); }
-  @media (max-width: 600px) { h1 { font-size: 28px; } .top { height: 56px; } nav a { margin-inline-start: 12px; } }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img, svg { max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3 { margin: 0; line-height: 1.15; text-wrap: balance; font-family: var(--font-head); font-weight: 700; letter-spacing: -.01em; }
+  p { margin: 0; }
+  .wrap { width: 100%; max-width: 1120px; margin-inline: auto; padding-inline: 20px; }
+  .num { direction: ltr; unicode-bidi: isolate; font-variant-numeric: tabular-nums; }
+  .mk { background: linear-gradient(transparent 58%, var(--yellow) 58%, var(--yellow) 94%, transparent 94%); padding-inline: 2px; }
+  .lead { color: var(--ink-2); font-size: 19px; max-width: 58ch; }
+  section { padding-block: clamp(56px, 8vw, 104px); }
+  .soft { background: var(--bg-soft); }
+  .sec-head { max-width: 720px; margin-bottom: clamp(28px, 5vw, 52px); }
+  .sec-head h2 { font-size: clamp(30px, 4.2vw, 46px); margin-bottom: 14px; }
+  :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+
+  /* Buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 12px 26px; border-radius: 999px; font-family: var(--font-head); font-weight: 700; font-size: 17px; text-decoration: none; border: 0; cursor: pointer; transition: transform .15s ease, background .15s ease, box-shadow .15s ease; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 10px 24px rgba(26,109,240,.28); }
+  .btn-primary:hover { background: var(--blue-deep); }
+  .btn-soft { background: var(--blue-soft); color: var(--blue-deep); }
+  .btn-soft:hover { background: #D9E7FF; }
+  .btn-white { background: #fff; color: var(--blue-deep); box-shadow: 0 8px 20px rgba(16,24,40,.12); }
+
+  /* Nav */
+  .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-head); font-weight: 700; font-size: 21px; color: var(--ink); }
+  .brand svg { width: 32px; height: 32px; flex: none; }
+  .nav-links { display: flex; gap: 26px; }
+  .nav-links a { color: var(--ink-2); text-decoration: none; font-size: 15.5px; font-weight: 500; white-space: nowrap; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav .btn { min-height: 44px; padding: 8px 20px; font-size: 15px; box-shadow: none; white-space: nowrap; }
+
+  /* Hero */
+  .hero { position: relative; padding-block: clamp(48px, 7vw, 88px) clamp(40px, 6vw, 72px); overflow: hidden; }
+  .hero::before { content: ""; position: absolute; inset: -10% -10% auto auto; width: 62%; height: 110%; background:
+      radial-gradient(38% 42% at 30% 35%, rgba(26,109,240,.22), transparent 70%),
+      radial-gradient(30% 34% at 68% 30%, rgba(255,198,38,.34), transparent 70%),
+      radial-gradient(28% 30% at 55% 78%, rgba(22,163,74,.18), transparent 70%),
+      radial-gradient(22% 26% at 20% 85%, rgba(229,72,77,.14), transparent 70%);
+    pointer-events: none; }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+  .kicker { display: inline-block; font-family: var(--font-head); font-weight: 500; font-size: 15px; color: var(--blue-deep); background: var(--blue-soft); padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(40px, 5.8vw, 68px); font-weight: 800; margin-bottom: 20px; }
+  .hero .lead { margin-bottom: 28px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 12px; }
+  .cta-note { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+  .promises { display: flex; flex-wrap: wrap; gap: 10px 22px; color: var(--ink-2); font-size: 15px; font-weight: 500; }
+  .promises span { display: inline-flex; align-items: center; gap: 8px; }
+  .promises svg { width: 18px; height: 18px; color: var(--green); flex: none; }
+
+  /* Account panel */
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); animation: rise .7s ease both; }
+  @keyframes rise { from { transform: translateY(12px); opacity: .5; } to { transform: none; opacity: 1; } }
+  .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 14px; }
+  .panel-title { display: flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 700; font-size: 16px; }
+  .panel-title small { color: var(--muted); font-weight: 400; font-family: var(--font); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(22,163,74,.5); animation: pulse 2s infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(22,163,74,.45); } 70% { box-shadow: 0 0 0 9px rgba(22,163,74,0); } 100% { box-shadow: 0 0 0 0 rgba(22,163,74,0); } }
+  .panel-time { font-size: 13px; color: var(--muted); }
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+  .kpi { background: var(--bg-soft); border-radius: 14px; padding: 12px 14px 10px; min-width: 0; }
+  .kpi .k { font-size: 13px; color: var(--muted); margin-bottom: 2px; }
+  .kpi .v { font-family: var(--font-head); font-weight: 800; font-size: 26px; line-height: 1.1; direction: ltr; text-align: right; color: var(--ink); }
+  .kpi .d { font-size: 12.5px; margin-top: 6px; color: var(--green); font-weight: 500; }
+  .kpi .d.n { color: var(--muted); }
+  .chart-box { border: 1px solid var(--line); border-radius: 14px; padding: 12px 12px 6px; margin-bottom: 14px; }
+  .chart-box .cap { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-bottom: 4px; flex-wrap: wrap; }
+  .legend { display: flex; gap: 12px; font-size: 12px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-inline-end: 5px; vertical-align: -1px; }
+  .chart-box svg { width: 100%; height: auto; display: block; direction: ltr; }
+  .log { display: grid; gap: 8px; }
+  .log-row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 10px; font-size: 14px; padding: 9px 12px; border-radius: 12px; background: var(--bg-soft); }
+  .pill { font-family: var(--font-head); font-size: 12px; padding: 3px 10px; border-radius: 999px; font-weight: 700; white-space: nowrap; }
+  .pill.keep { background: var(--green-soft); color: #15803D; }
+  .pill.revert { background: var(--red-soft); color: #B42318; }
+  .pill.watch { background: var(--yellow-soft); color: #8A5A00; }
+  .log-row .m { font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+
+  /* Proof */
+  .proof { padding-block: clamp(36px, 5vw, 64px) clamp(48px, 7vw, 88px); }
+  .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-block: 1px solid var(--line); }
+  .tile { padding: 28px 22px 26px; min-width: 0; border-inline-start: 1px solid var(--line); }
+  .tile:first-child { border-inline-start: 0; }
+  .tile .big { font-family: var(--font-head); font-weight: 800; font-size: clamp(40px, 4.4vw, 56px); line-height: 1; color: var(--blue); direction: ltr; text-align: right; }
+  .tile .lab { font-family: var(--font-head); font-weight: 700; margin-top: 10px; font-size: 17px; }
+  .tile .sub { color: var(--muted); font-size: 14.5px; margin-top: 6px; line-height: 1.55; }
+  .footnote { color: var(--muted); font-size: 13px; margin-top: 16px; line-height: 1.6; }
+
+  /* How it works */
+  .how { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 3vw, 36px); }
+  .how-item { min-width: 0; }
+  .icon { width: 56px; height: 56px; border-radius: 18px; display: grid; place-items: center; margin-bottom: 16px; }
+  .icon svg { width: 26px; height: 26px; }
+  .icon.b { background: var(--blue-soft); color: var(--blue); }
+  .icon.g { background: var(--green-soft); color: var(--green); }
+  .icon.y { background: var(--yellow-soft); color: #B7791F; }
+  .icon.r { background: var(--red-soft); color: var(--red); }
+  .how-item h3 { font-size: 21px; margin-bottom: 8px; }
+  .how-item p { color: var(--ink-2); font-size: 16px; }
+
+  /* Results */
+  .case-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .case { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; display: grid; grid-template-rows: auto auto auto 1fr; gap: 14px; min-width: 0; box-shadow: 0 8px 24px rgba(16,24,40,.05); }
+  .case .who { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .case .who b { font-family: var(--font-head); font-size: 19px; font-weight: 700; }
+  .case .who span { font-size: 13.5px; color: var(--muted); }
+  .case .head { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; }
+  .case .metric { font-size: 14px; color: var(--muted); }
+  .case .delta { font-family: var(--font-head); font-weight: 800; font-size: clamp(34px, 3.5vw, 44px); line-height: 1; color: var(--green); direction: ltr; text-align: right; }
+  .case svg { width: 100%; height: auto; display: block; direction: ltr; }
+  .case ul { margin: 0; padding-inline-start: 18px; color: var(--ink-2); font-size: 15.5px; display: grid; gap: 7px; }
+  .case .src { font-size: 12.5px; color: var(--muted); }
+
+  /* Communication */
+  .comm .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+  .comm h2 { font-size: clamp(30px, 4.2vw, 46px); margin-bottom: 14px; }
+  .points { display: grid; gap: 16px; margin-top: 22px; }
+  .point { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+  .point .ck { width: 30px; height: 30px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); display: grid; place-items: center; margin-top: 2px; }
+  .point .ck svg { width: 16px; height: 16px; }
+  .point b { font-family: var(--font-head); display: block; font-size: 17px; margin-bottom: 2px; }
+  .point p { color: var(--ink-2); font-size: 15.5px; }
+  .chat { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; max-width: 440px; margin-inline: auto; width: 100%; }
+  .chat-head { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--line); background: var(--bg-soft); }
+  .chat-head .av { width: 38px; height: 38px; border-radius: 50%; background: var(--blue); color: #fff; display: grid; place-items: center; font-family: var(--font-head); font-weight: 700; }
+  .chat-head b { font-family: var(--font-head); display: block; font-size: 15px; }
+  .chat-head small { color: var(--green); font-size: 12.5px; }
+  .chat-body { padding: 16px; display: grid; gap: 10px; background: #F7F9FC; }
+  .bubble { max-width: 86%; padding: 10px 14px; border-radius: 16px; font-size: 14.5px; line-height: 1.5; position: relative; }
+  .bubble time { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; text-align: left; }
+  .bubble.in { background: #fff; border: 1px solid var(--line); justify-self: start; border-start-start-radius: 4px; }
+  .bubble.out { background: #DCF5E3; justify-self: end; border-start-end-radius: 4px; }
+
+  /* Services */
+  .svc-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+  .svc-col { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px 24px; min-width: 0; }
+  .svc-col.core { border-color: #BFD5FF; background: linear-gradient(180deg, #F3F7FF, #fff 40%); }
+  .svc-col h3 { font-size: 20px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .tag { font-family: var(--font-head); font-size: 12px; font-weight: 700; color: var(--blue-deep); background: var(--blue-soft); padding: 3px 10px; border-radius: 999px; }
+  .svc-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .svc-list li { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
+  .svc-list .ck { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; margin-top: 3px; }
+  .svc-list .ck svg { width: 14px; height: 14px; }
+  .core .ck { background: var(--blue-soft); color: var(--blue); }
+  .around .ck { background: var(--green-soft); color: var(--green); }
+  .svc-list b { font-family: var(--font-head); display: block; font-size: 16.5px; }
+  .svc-list p { color: var(--ink-2); font-size: 15px; }
+
+  /* Agencies band */
+  .band { background: var(--blue); color: #fff; border-radius: var(--radius); padding: clamp(28px, 4vw, 44px); display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; position: relative; overflow: hidden; }
+  .band::after { content: ""; position: absolute; inset-inline-start: -60px; bottom: -120px; width: 260px; height: 260px; border-radius: 50%; background: rgba(255,198,38,.35); pointer-events: none; }
+  .band h3 { font-size: clamp(24px, 3vw, 32px); margin-bottom: 8px; position: relative; }
+  .band p { font-size: 17px; max-width: 60ch; color: rgba(255,255,255,.88); position: relative; }
+  .band .btn { position: relative; }
+
+  /* First month */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .step { min-width: 0; position: relative; }
+  .step .n { width: 44px; height: 44px; border-radius: 50%; background: var(--blue); color: #fff; font-family: var(--font-head); font-weight: 700; display: grid; place-items: center; margin-bottom: 14px; position: relative; z-index: 1; }
+  .step::before { content: ""; position: absolute; top: 22px; inset-inline-start: 44px; inset-inline-end: -20px; height: 2px; background: var(--line-2); }
+  .step:last-child::before { display: none; }
+  .step .w { font-size: 14px; color: var(--blue-deep); font-weight: 500; margin-bottom: 4px; }
+  .step h3 { font-size: 20px; margin-bottom: 8px; }
+  .step p { color: var(--ink-2); font-size: 15.5px; }
+
+  /* About */
+  .about .wrap { display: grid; grid-template-columns: 300px 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+  .portrait-wrap { position: relative; padding: 14px; }
+  .portrait-wrap::before { content: ""; position: absolute; inset: 0; background: var(--yellow); border-radius: 28px; transform: rotate(-4deg); }
+  .portrait { position: relative; aspect-ratio: 4 / 5; border-radius: 22px; background: linear-gradient(160deg, #EDF3FF, #fff); border: 1px solid var(--line); display: grid; place-items: center; overflow: hidden; }
+  .portrait span { font-family: var(--font-head); font-weight: 800; font-size: 96px; color: var(--blue); }
+  .portrait small { position: absolute; bottom: 12px; inset-inline: 12px; font-size: 12px; color: var(--muted); text-align: center; }
+  .about h2 { font-size: clamp(28px, 3.6vw, 40px); margin-bottom: 14px; }
+  .about p { color: var(--ink-2); font-size: 17px; margin-bottom: 14px; max-width: 60ch; }
+
+  /* FAQ */
+  .faq-list { max-width: 820px; display: grid; gap: 10px; }
+  details { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 0 20px; }
+  summary { cursor: pointer; list-style: none; padding: 18px 0; font-family: var(--font-head); font-weight: 700; font-size: 17px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-family: var(--font-head); color: var(--blue); font-size: 24px; flex: none; transition: transform .2s ease; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { color: var(--ink-2); padding-bottom: 20px; font-size: 16px; max-width: 70ch; }
+
+  /* Contact */
+  .contact { background: var(--bg-tint); }
+  .contact .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+  .contact h2 { font-size: clamp(30px, 4.2vw, 46px); margin-bottom: 14px; }
+  .contact .lead { margin-bottom: 22px; }
+  .ways { display: grid; gap: 10px; margin-top: 8px; }
+  .way { display: flex; align-items: center; gap: 12px; color: var(--ink-2); font-size: 15.5px; }
+  .way[hidden] { display: none; }
+  .way a { color: var(--blue-deep); text-decoration: none; border-bottom: 1px solid #BFD5FF; }
+  .way svg { width: 20px; height: 20px; color: var(--blue); flex: none; }
+  form { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: grid; gap: 14px; box-shadow: var(--shadow); }
+  label { display: grid; gap: 6px; font-size: 14px; color: var(--ink-2); font-weight: 500; }
+  input, select { width: 100%; min-height: 50px; padding: 10px 14px; background: #fff; border: 1px solid var(--line-2); border-radius: 12px; color: var(--ink); font-family: var(--font); font-size: 16px; }
+  input:focus, select:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(26,109,240,.15); }
+  input::placeholder { color: #98A2B3; }
+  form .btn { width: 100%; margin-top: 4px; }
+  form small { color: var(--muted); font-size: 12.5px; text-align: center; }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--line); padding-block: 26px 40px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; align-items: center; }
+  footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  footer a { color: var(--ink-2); text-decoration: none; }
+  footer a:hover { color: var(--blue); }
+
+  /* Floating WhatsApp */
+  .fab { position: fixed; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); inset-inline-start: 18px; z-index: 60; width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff; display: grid; place-items: center; box-shadow: 0 12px 30px rgba(0,0,0,.22); }
+  .fab svg { width: 30px; height: 30px; }
+  .fab[hidden] { display: none; }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .nav-links { display: none; }
+    .hero .wrap { grid-template-columns: 1fr; }
+    .hero::before { width: 100%; height: 60%; inset: auto -10% -10% auto; }
+    .proof-grid { grid-template-columns: repeat(2, 1fr); }
+    .tile:nth-child(3) { border-inline-start: 0; }
+    .tile:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .how { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .step:nth-child(2)::before { display: none; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .comm .wrap, .about .wrap, .contact .wrap { grid-template-columns: 1fr; }
+    .portrait-wrap { max-width: 280px; }
+    .band { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .nav-links { display: none; }
+    .nav .wrap { height: 62px; }
+    .brand { font-size: 19px; }
+    .proof-grid, .how, .case-grid, .steps { grid-template-columns: 1fr; }
+    .tile { border-inline-start: 0; border-top: 1px solid var(--line); padding: 22px 4px; }
+    .tile:first-child { border-top: 0; }
+    .step::before { display: none; }
+    .kpis { gap: 8px; }
+    .kpi { padding: 10px 10px 8px; }
+    .kpi .v { font-size: 20px; }
+    .kpi .k { font-size: 12px; }
+    .panel { padding: 14px; }
+    .panel-head { align-items: flex-start; }
+    .panel-title { flex-wrap: wrap; row-gap: 2px; }
+    .panel-title small { flex-basis: 100%; font-size: 13px; }
+    .lead { font-size: 17px; }
+    .btn { width: 100%; }
+    .nav .btn { width: auto; }
+    .log-row { grid-template-columns: auto 1fr; }
+    .log-row .m { grid-column: 2; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap top">
-    <a class="brand" href="/">Alu<span>marketing</span></a>
-    <nav>
-      <a href="#about">מי אנחנו</a>
-      <a href="#app">המערכת</a>
-      <a href="#en">English</a>
-      <a href="/privacy.html">מדיניות פרטיות</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Alumarketing, לתחילת הדף">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1A6DF0"/><rect x="13" y="36" width="9" height="15" rx="2.5" fill="#fff"/><rect x="26.5" y="27" width="9" height="24" rx="2.5" fill="#fff"/><rect x="40" y="17" width="9" height="34" rx="2.5" fill="#fff"/><circle cx="52" cy="12" r="4.5" fill="#FFC626"/></svg>
+      Alumarketing
+    </a>
+    <nav class="nav-links" aria-label="ניווט">
+      <a href="#how">איך זה עובד</a>
+      <a href="#results">תוצאות</a>
+      <a href="#services">מה כלול</a>
+      <a href="#start">החודש הראשון</a>
+      <a href="#faq">שאלות</a>
     </nav>
+    <a class="btn btn-primary" href="#contact">פגישת ייעוץ</a>
   </div>
 </header>
 
-<main class="wrap">
-  <h1>ניהול קמפיינים ממומנים בגוגל ובמטא</h1>
-  <p class="lead">Alumarketing היא סוכנות פרסום דיגיטלי בבעלות שגיא אלומה. אנחנו מנהלים חשבונות Google Ads ו-Meta Ads עבור עסקים בישראל ובאוסטרליה: חנויות אונליין ועסקי שירות שמחפשים לידים.</p>
+<main id="top">
 
-  <h2 id="about">מי אנחנו</h2>
-  <p>סוכנות קטנה שעובדת עם מספר מצומצם של לקוחות, ומודדת את עצמה במה שחשוב ללקוח: מכירות ורווחיות בחנות, לידים ועסקאות סגורות בעסק שירות. כל חשבון מנוהל לפי היעדים שלו, בתוך התקציב שלו, עם מעקב יומי.</p>
-  <ul>
-    <li>Google Ads: חיפוש, שופינג, Performance Max, ניהול פידים ב-Merchant Center.</li>
-    <li>Meta Ads: קמפיינים ללידים ולמכירות, לצד גוגל.</li>
-    <li>מדידה: מעקב המרות, חיבור למקור האמת של הלקוח (Shopify, CRM, טבלאות עסקאות).</li>
-  </ul>
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">ניהול חשבונות פרסום, עם התמחות ב-Google Ads</span>
+      <h1>יותר <span class="mk">מכירות ולידים</span> מכל שקל בפרסום.</h1>
+      <p class="lead">אנחנו מנהלים את חשבונות הפרסום של חנויות אונליין ועסקי שירות. קובעים יחד יעד במספרים, עובדים על החשבון כל יום, ומראים לכם תוצאות. לא קליקים.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">לתיאום פגישת ייעוץ</a>
+        <a class="btn btn-soft" href="#how">איך זה עובד</a>
+      </div>
+      <p class="cta-note">בדיקת חשבון הגוגל שלכם וייעוץ ראשוני, ללא עלות.</p>
+      <div class="promises">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>יעד במספרים מהיום הראשון</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>ליווי אישי בוואטסאפ</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>החשבון נשאר שלכם</span>
+      </div>
+    </div>
 
-  <h2 id="app">המערכת: Alumarketing Agency Automation</h2>
-  <div class="card">
-    <p>כדי לנהל את החשבונות באותה רמה כל יום, פיתחנו מערכת אוטומציה פנימית. היא מתחברת דרך Google Ads API לחשבונות הלקוחות שאנחנו מנהלים (באמצעות חשבון המנהל של הסוכנות), ועושה שלושה דברים:</p>
-    <ul>
-      <li><strong>קוראת</strong> נתוני ביצועים מדי יום: הוצאה, קליקים, המרות, מונחי חיפוש, מצב פידים ומודעות.</li>
-      <li><strong>מנטרת</strong> תקציבים, יעדים, סטיות וחריגות, ומתריעה כשמשהו דורש החלטה.</li>
-      <li><strong>מבצעת</strong> אופטימיזציות בתוך מדיניות מוגדרת מראש: התאמת תקציבים ויעדי הצעה, מילות מפתח שליליות, מודעות חדשות. שינויים מהותיים מחכים לאישור אנושי.</li>
-    </ul>
-    <p>המערכת משמשת את הסוכנות בלבד, על חשבונות של לקוחות שנתנו לנו גישה. אין הרשמה ציבורית, אין משתמשים חיצוניים, והנתונים לא נמכרים ולא מועברים לצד שלישי. הפרטים המלאים ב<a href="/privacy.html">מדיניות הפרטיות</a>.</p>
+    <div class="panel" role="img" aria-label="תמונת מצב של חשבון: ROAS 6.65, 14.4 מכירות ביום, הכנסות פי 4 בארבע תקופות של 28 יום על אותה הוצאה, ורשימת שינויים: אחד נשאר, אחד בוטל, אחד במעקב">
+      <div class="panel-head">
+        <div class="panel-title"><span class="dot" aria-hidden="true"></span>החשבון שלכם, היום <small>חנות אונליין</small></div>
+        <div class="panel-time">עודכן 08:00</div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="k">ROAS</div><div class="v">6.65</div><div class="d">+94% מול לפני</div></div>
+        <div class="kpi"><div class="k">מכירות ביום</div><div class="v">14.4</div><div class="d">+67% מול לפני</div></div>
+        <div class="kpi"><div class="k">הכנסות, 4 חודשים</div><div class="v">×4.1</div><div class="d n">תקציב +4%</div></div>
+      </div>
+      <div class="chart-box">
+        <div class="cap"><span>ארבע תקופות של 28 יום</span>
+          <span class="legend"><span><i style="background:#1A6DF0"></i>הכנסות מגוגל</span><span><i style="background:#F5B301"></i>תקציב</span></span></div>
+        <svg viewBox="0 0 320 150" aria-hidden="true">
+          <g stroke="#E4E9F2" stroke-width="1"><line x1="20" y1="125" x2="300" y2="125"/><line x1="20" y1="75" x2="300" y2="75"/><line x1="20" y1="25" x2="300" y2="25"/></g>
+          <g fill="#1A6DF0">
+            <rect x="30" y="100.9" width="44" height="24.1" rx="4"/>
+            <rect x="105" y="106.4" width="44" height="18.6" rx="4"/>
+            <rect x="180" y="45.3" width="44" height="79.7" rx="4"/>
+            <rect x="255" y="25" width="44" height="100" rx="4"/>
+          </g>
+          <g font-family="Rubik, Heebo, sans-serif" font-size="11.5" font-weight="700" fill="#101828" text-anchor="middle">
+            <text x="52" y="95">40K</text><text x="127" y="100">31K</text><text x="202" y="39">133K</text><text x="277" y="19">167K</text>
+          </g>
+          <polyline points="52,110.6 127,108.9 202,111.9 277,110" fill="none" stroke="#F5B301" stroke-width="3" stroke-linejoin="round"/>
+          <g fill="#F5B301" stroke="#fff" stroke-width="1.5"><circle cx="52" cy="110.6" r="4"/><circle cx="127" cy="108.9" r="4"/><circle cx="202" cy="111.9" r="4"/><circle cx="277" cy="110" r="4"/></g>
+          <g font-family="Heebo, sans-serif" font-size="10.5" fill="#667085" text-anchor="middle">
+            <text x="52" y="142">1</text><text x="127" y="142">2</text><text x="202" y="142">3</text><text x="277" y="142">4</text>
+          </g>
+        </svg>
+      </div>
+      <div class="log">
+        <div class="log-row"><span class="pill keep">נשאר</span><span>מילת מפתח חדשה: יותר מכירות</span><span class="m">14 יום</span></div>
+        <div class="log-row"><span class="pill revert">בוטל</span><span>העלאת יעד: המכירות ירדו, הוחזר</span><span class="m">יום 5</span></div>
+        <div class="log-row"><span class="pill watch">במעקב</span><span>חלוקת תקציב חדשה בין הקמפיינים</span><span class="m">יום 6 מתוך 14</span></div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <h2 id="contact">יצירת קשר</h2>
-  <p class="contact">שגיא אלומה, Alumarketing<br>
-  דוא"ל: <a href="mailto:alumasagi82@gmail.com">alumasagi82@gmail.com</a></p>
+<!-- Proof -->
+<section class="proof" id="numbers" aria-label="תוצאות במספרים">
+  <div class="wrap">
+    <div class="proof-grid">
+      <div class="tile">
+        <div class="big"><span class="num" data-count="94" data-prefix="+" data-suffix="%">+94%</span></div>
+        <div class="lab">ROAS, חנות אונליין</div>
+        <div class="sub">3.43 לפנינו, 6.65 היום. אותה מדידה בשני הצדדים.</div>
+      </div>
+      <div class="tile">
+        <div class="big"><span class="num" data-count="4" data-prefix="×" data-suffix="">×4</span></div>
+        <div class="lab">הכנסות מגוגל בארבעה חודשים</div>
+        <div class="sub">אותה חנות, כמעט אותו תקציב. הכסף לא גדל, התוצאה כן.</div>
+      </div>
+      <div class="tile">
+        <div class="big"><span class="num" data-count="71" data-prefix="+" data-suffix="%">+71%</span></div>
+        <div class="lab">ROAS, משלוחי פרחים</div>
+        <div class="sub">2.25 לפנינו, 3.85 היום. באותם ימים שנה קודם: 1.79. זו לא העונה.</div>
+      </div>
+      <div class="tile">
+        <div class="big"><span class="num" data-count="326" data-prefix="" data-suffix="">326</span></div>
+        <div class="lab">פניות בחודש, שירותי חירום</div>
+        <div class="sub">חשבון שנבנה מאפס. כ-11 פניות ביום, שיחות וטפסים.</div>
+      </div>
+    </div>
+    <p class="footnote">מכירות ופניות שנמדדו ב-Google Ads. 28 הימים המלאים האחרונים מול התקופה שלפני שנכנסנו לחשבון. נקרא ב-29.9.2026. הלקוחות מופיעים בלי שם.</p>
+  </div>
+</section>
 
-  <section class="en" id="en">
-    <h2>About Alumarketing (English)</h2>
-    <p>Alumarketing is a digital advertising agency owned by Sagi Aluma. We manage Google Ads and Meta Ads accounts for businesses in Israel and Australia: online stores measured on sales and profitability, and service businesses measured on leads and closed deals.</p>
-    <h2>The application: Alumarketing Agency Automation</h2>
-    <p>To run every account to the same standard every day, the agency built an internal automation system. Through the Google Ads API it connects to the client accounts we manage, under the agency's manager account, and does three things: it reads performance data daily (spend, clicks, conversions, search terms, feed and ad status), it monitors budgets, targets and anomalies and raises what needs a decision, and it applies optimisations inside a pre-defined policy (budget and bid target adjustments, negative keywords, new ads), while material changes wait for a human approval.</p>
-    <p>The application is used by the agency only, on accounts whose owners granted us access. There is no public sign-up and no external user. Data is never sold or shared with third parties. Details are in the <a href="/privacy.html">privacy policy</a>.</p>
-    <p>Contact: Sagi Aluma, <a href="mailto:alumasagi82@gmail.com">alumasagi82@gmail.com</a></p>
-  </section>
+<!-- How it works -->
+<section class="soft" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>איך זה עובד <span class="mk">אצלנו</span></h2>
+      <p class="lead">ארבעה דברים שאתם מקבלים מהיום הראשון, ושרוב החשבונות לא מקבלים.</p>
+    </div>
+    <div class="how">
+      <div class="how-item">
+        <div class="icon b" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+        <h3>יעד במספרים</h3>
+        <p>בפגישה הראשונה קובעים יחד יעד אחד ברור: כמה עולה לכם לקוח, או כמה מחזיר כל שקל בפרסום. מהרגע הזה, הכל נמדד מולו.</p>
+      </div>
+      <div class="how-item">
+        <div class="icon g" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg></div>
+        <h3>עבודה יומיומית</h3>
+        <p>החשבון נבדק כל יום: תקציב, תוצאות, מונחי חיפוש, מודעות. מה שעובד מקבל יותר. מה שלא עובד נעצר, לפני שהוא עולה כסף.</p>
+      </div>
+      <div class="how-item">
+        <div class="icon y" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 14 4-4 3 3 5-6"/></svg></div>
+        <h3>תוצאות, לא דוחות</h3>
+        <p>אתם רואים מכירות ופניות, לא חשיפות וקליקים. מספר אחד מול יעד אחד, בשפה שלכם. דוח מפורט נבנה כשצריך אותו.</p>
+      </div>
+      <div class="how-item">
+        <div class="icon r" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg></div>
+        <h3>ליווי אישי</h3>
+        <p>אדם אחד שמכיר את העסק שלכם, זמין בוואטסאפ ועונה באותו יום. כשמשהו דורש החלטה, אתם שומעים על זה ראשונים.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results -->
+<section id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>לפני ואחרי, <span class="mk">באותם מדדים</span></h2>
+      <p class="lead">ארבעה חשבונות שאנחנו מנהלים. אותה מדידה בשני הצדדים: 28 ימים מלאים מול התקופה שלפני שנכנסנו.</p>
+    </div>
+    <div class="case-grid">
+
+      <article class="case">
+        <div class="who"><b>חנות תוספי תזונה</b><span>חנות אונליין</span></div>
+        <div class="head"><div><div class="metric">ROAS. לפנינו 3.43, היום 6.65</div><div class="delta">+94%</div></div></div>
+        <svg viewBox="0 0 320 120" role="img" aria-label="ROAS לפנינו 3.43 והיום 6.65">
+          <g fill="#CBD5E1"><rect x="30" y="66" width="110" height="34" rx="6"/></g>
+          <g fill="#1A6DF0"><rect x="180" y="34" width="110" height="66" rx="6"/></g>
+          <line x1="20" y1="100" x2="300" y2="100" stroke="#E4E9F2"/>
+          <g font-family="Rubik, Heebo, sans-serif" font-size="13" fill="#101828" text-anchor="middle" font-weight="700"><text x="85" y="58">3.43</text><text x="235" y="26">6.65</text></g>
+          <g font-family="Heebo, sans-serif" font-size="12" fill="#667085" text-anchor="middle"><text x="85" y="116">לפנינו</text><text x="235" y="116">היום</text></g>
+        </svg>
+        <ul>
+          <li>מכירות ביום: 8.6 לפנינו, 14.4 היום. ההכנסות מגוגל גדלו פי 4 בארבעה חודשים, על כמעט אותו תקציב.</li>
+          <li>סידרנו את החשבון מחדש: הפרדנו בין מי שמחפש את המותג למי שמחפש את המוצר, וכל מודעה מובילה לדף המוצר שלה.</li>
+          <li>מבצעים מתעדכנים בכל המודעות בבת אחת, ויורדים לבד כשהמבצע נגמר.</li>
+        </ul>
+        <div class="src">Google Ads, אותה פעולת מכירה בשני הצדדים. 29.9.2026</div>
+      </article>
+
+      <article class="case">
+        <div class="who"><b>משלוחי פרחים</b><span>חנות אונליין</span></div>
+        <div class="head"><div><div class="metric">ROAS. לפנינו 2.25, היום 3.85, שנה קודם 1.79</div><div class="delta">+71%</div></div></div>
+        <svg viewBox="0 0 320 120" role="img" aria-label="ROAS שנה קודם 1.79, לפנינו 2.25, היום 3.85">
+          <g fill="#E2E8F0"><rect x="20" y="70" width="76" height="30" rx="6"/></g>
+          <g fill="#CBD5E1"><rect x="122" y="62" width="76" height="38" rx="6"/></g>
+          <g fill="#1A6DF0"><rect x="224" y="35" width="76" height="65" rx="6"/></g>
+          <line x1="10" y1="100" x2="310" y2="100" stroke="#E4E9F2"/>
+          <g font-family="Rubik, Heebo, sans-serif" font-size="13" fill="#101828" text-anchor="middle" font-weight="700"><text x="58" y="62">1.79</text><text x="160" y="54">2.25</text><text x="262" y="27">3.85</text></g>
+          <g font-family="Heebo, sans-serif" font-size="12" fill="#667085" text-anchor="middle"><text x="58" y="116">שנה קודם</text><text x="160" y="116">לפנינו</text><text x="262" y="116">היום</text></g>
+        </svg>
+        <ul>
+          <li>מכירות ביום: 2.8 לפנינו, 4.5 היום. ב-28 הימים האחרונים: הכנסות +49% על תקציב נמוך ב-12%.</li>
+          <li>מודעות המוצרים חולקו לקבוצות עם יעד לכל אחת, ויותר מ-300 שמות מוצרים נכתבו מחדש כדי להופיע בחיפושים הנכונים.</li>
+          <li>הקמפיין שלא הביא מכירות נעצר, והתקציב שלו עבר למה שכן מוכר.</li>
+        </ul>
+        <div class="src">Google Ads, רכישות. אותם 28 ימים שנה קודם: 1.79. 29.9.2026</div>
+      </article>
+
+      <article class="case">
+        <div class="who"><b>מנעולן, שירותי חירום</b><span>לידים: שיחות וטפסים</span></div>
+        <div class="head"><div><div class="metric">פניות ב-28 יום. חשבון שנבנה מאפס</div><div class="delta">326</div></div></div>
+        <svg viewBox="0 0 320 120" role="img" aria-label="פניות ב-28 יום: 0 לפני, 326 היום">
+          <g fill="#CBD5E1"><rect x="30" y="97" width="110" height="3" rx="1.5"/></g>
+          <g fill="#1A6DF0"><rect x="180" y="24" width="110" height="76" rx="6"/></g>
+          <line x1="20" y1="100" x2="300" y2="100" stroke="#E4E9F2"/>
+          <g font-family="Rubik, Heebo, sans-serif" font-size="13" fill="#101828" text-anchor="middle" font-weight="700"><text x="85" y="90">0</text><text x="235" y="16">326</text></g>
+          <g font-family="Heebo, sans-serif" font-size="12" fill="#667085" text-anchor="middle"><text x="85" y="116">לפנינו</text><text x="235" y="116">היום</text></g>
+        </svg>
+        <ul>
+          <li>עלות לפנייה: 121 דולר, מתחת ליעד שקבענו עם הלקוח (130).</li>
+          <li>התקציב היומי מתחלק בין הקמפיינים כל לילה לפי יום בשבוע, כי שבת לא נראית כמו שלישי.</li>
+          <li>העסקאות שהלקוח סגר חוזרות לגוגל, אז מודדים גם כסף שנכנס, לא רק פניות.</li>
+        </ul>
+        <div class="src">Google Ads, שיחות, טפסים ושיחות מהמודעה. חשבון שנפתח ביולי 2026. 29.9.2026</div>
+      </article>
+
+      <article class="case">
+        <div class="who"><b>חנות תכשיטים</b><span>מוכרת לחו"ל</span></div>
+        <div class="head"><div><div class="metric">ROAS. לפנינו 2.21, היום 2.86</div><div class="delta">+30%</div></div></div>
+        <svg viewBox="0 0 320 120" role="img" aria-label="ROAS לפנינו 2.21 והיום 2.86">
+          <g fill="#CBD5E1"><rect x="30" y="49" width="110" height="51" rx="6"/></g>
+          <g fill="#1A6DF0"><rect x="180" y="34" width="110" height="66" rx="6"/></g>
+          <line x1="20" y1="100" x2="300" y2="100" stroke="#E4E9F2"/>
+          <g font-family="Rubik, Heebo, sans-serif" font-size="13" fill="#101828" text-anchor="middle" font-weight="700"><text x="85" y="41">2.21</text><text x="235" y="26">2.86</text></g>
+          <g font-family="Heebo, sans-serif" font-size="12" fill="#667085" text-anchor="middle"><text x="85" y="116">לפנינו</text><text x="235" y="116">היום</text></g>
+        </svg>
+        <ul>
+          <li>1,591 מוצרים סודרו בפיד לפי רווחיות. המוצרים שגוגל הגביל ירדו מ-51% ל-1.1%.</li>
+          <li>הורדנו את יעד ה-ROAS מ-4.2 ל-3.6, וה-ROAS בפועל עלה מ-2.39 ל-3.12. יותר מכירות, בקליק זול יותר.</li>
+          <li>קמפיין חיפוש חדש על המונחים שכבר הוכיחו שהם מוכרים.</li>
+        </ul>
+        <div class="src">Google Ads, רכישות, על תקציב נמוך מזה שלפנינו. 29.9.2026</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Communication -->
+<section class="soft comm" id="comm">
+  <div class="wrap">
+    <div>
+      <h2>אדם אחד. מספר אחד. <span class="mk">תשובה באותו יום.</span></h2>
+      <p class="lead">ליווי זה לא דוח חודשי במייל. זה מישהו שמכיר את העסק שלכם, רואה את החשבון כל בוקר, ומדבר איתכם כמו שותף.</p>
+      <div class="points">
+        <div class="point"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></div><div><b>וואטסאפ, לא מערכת פניות</b><p>שאלה נענית באותו יום. בקשה לשינוי תקציב מבוצעת באותו יום.</p></div></div>
+        <div class="point"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></div><div><b>אתם שומעים ראשונים</b><p>אתר שנפל, מודעה שנפסלה, תקציב שנגמר מוקדם: מזהים באותו יום ומעדכנים אתכם, לפני שהלקוחות שלכם מרגישים.</p></div></div>
+        <div class="point"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></div><div><b>כל חודש: איפה אנחנו מול היעד</b><p>סיכום קצר וברור, ומה עושים בחודש הבא. בלי מצגות של ארבעים שקפים.</p></div></div>
+      </div>
+    </div>
+    <div class="chat" role="img" aria-label="דוגמה לשיחת וואטסאפ עם לקוח: שאלה על שבוע החג, ותשובה עם המספרים">
+      <div class="chat-head"><div class="av">A</div><div><b>Alumarketing</b><small>אונליין</small></div></div>
+      <div class="chat-body">
+        <div class="bubble in">היי, איך היה שבוע החג?<time>09:41</time></div>
+        <div class="bubble out">78 הזמנות מגוגל, כל שקל החזיר 4.4. שנה שעברה באותו שבוע: 2.4. הגדלנו תקציב בשלישי והורדנו חזרה אחרי החג.<time>09:52</time></div>
+        <div class="bubble in">מעולה. והקמפיין החדש?<time>09:53</time></div>
+        <div class="bubble out">רץ שישה ימים, מוקדם לשפוט. ביום 14 נדע אם הוא נשאר, ואני אעדכן.<time>09:55</time></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>מה כלול</h2>
+      <p class="lead">Google Ads הוא הליבה. מסביבו יש עוד דברים שקובעים אם הקליק הופך למכירה, ולכן גם הם בפנים.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-col core">
+        <h3>Google Ads <span class="tag">הליבה</span></h3>
+        <ul class="svc-list">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>קמפייני חיפוש</b><p>להופיע כשמישהו מחפש בדיוק את מה שאתם מוכרים, עם מודעות שכתובות למי שמחפש.</p></div></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>מודעות מוצרים (Shopping) והפיד</b><p>שהמוצרים יופיעו נכון, במחיר הנכון, בחיפושים הנכונים. כולל סידור הפיד ב-Merchant Center.</p></div></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>Performance Max</b><p>כל הערוצים של גוגל בקמפיין אחד, עם בדיקה קבועה של מה באמת מביא את המכירות בו.</p></div></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>תקציב והצעות מחיר</b><p>הכסף הולך למה שמוכר. יעדי המחיר נקבעים לפי מה שהחשבון באמת מחזיר, ומתעדכנים כשהמספרים משתנים.</p></div></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>מדידה שאפשר לסמוך עליה</b><p>שכל מכירה וכל פנייה ייספרו פעם אחת, במקום הנכון. Google Analytics, Tag Manager, ומכירות מהחנות עצמה.</p></div></li>
+        </ul>
+      </div>
+      <div class="svc-col around">
+        <h3>ומה שמסביב</h3>
+        <ul class="svc-list">
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>דפי נחיתה והחנות</b><p>הקליק כבר שולם. הדף צריך לסגור. שיפורים בדף ובחנות שמעלים את אחוז הקונים.</p></div></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>Meta, כשזה נכון לעסק</b><p>קמפיינים בפייסבוק ובאינסטגרם לצד גוגל, בדרך כלל ללידים או למכירה חוזרת.</p></div></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>יעדים, ליווי ותקשורת</b><p>יעד במספרים, סיכום חודשי מולו, ואדם אחד בוואטסאפ. זה חלק מהשירות, לא תוספת.</p></div></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg></span><div><b>החשבון שלכם, תמיד</b><p>אנחנו מקבלים גישת ניהול. ההיסטוריה, המודעות והנתונים נשארים אצלכם.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Agencies -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h3>עובדים בסוכנות? אנחנו הגוגל של הלקוחות שלכם.</h3>
+        <p>סוכנויות מעבירות אלינו את ניהול Google Ads של הלקוחות שלהן ומקבלות מנהל קמפיינים שמדווח להן. הקשר עם הלקוח נשאר שלכם.</p>
+      </div>
+      <a class="btn btn-white" href="#contact">לדבר על שיתוף פעולה</a>
+    </div>
+  </div>
+</section>
+
+<!-- First month -->
+<section class="soft" id="start">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>החודש הראשון</h2>
+      <p class="lead">בלי חודש של "הכרות". קודם מודדים, אחר כך משנים, ובסוף החודש יש תמונה ברורה מול היעד.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div class="w">שבוע ראשון</div><h3>מכירים ומודדים</h3><p>גישה לחשבון ובדיקה מלאה: מה עובד, מה מבזבז, מה לא נמדד. קובעים יחד יעד אחד במספרים.</p></div>
+      <div class="step"><div class="n">2</div><div class="w">שבוע שני</div><h3>מסדרים את היסודות</h3><p>מדידה שאפשר לסמוך עליה, מבנה נקי, תקציב שהולך למה שמוכר.</p></div>
+      <div class="step"><div class="n">3</div><div class="w">שבועות שלישי ורביעי</div><h3>משפרים</h3><p>שינוי, מדידה, שינוי. מה שעובד נשאר ומקבל יותר. מה שלא, יורד.</p></div>
+      <div class="step"><div class="n">4</div><div class="w">יום 30</div><h3>תמונה מלאה</h3><p>לפני ואחרי מול היעד, באותם מדדים, ומה עושים בחודש הבא.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="portrait-wrap">
+      <div class="portrait" role="img" aria-label="שגיא אלומה">
+        <span>ש</span>
+        <small>שגיא אלומה</small>
+      </div>
+    </div>
+    <div>
+      <h2>שגיא אלומה. מנהל את Alumarketing, ואת החשבונות בעצמו.</h2>
+      <p>אין מנהל תיק לקוחות באמצע. מי שמדבר איתכם הוא מי שנוגע בחשבון, ומי שרואה כל בוקר מה קרה בו אתמול.</p>
+      <p>הגישה שלי פשוטה: יעד ברור, עבודה יומיומית, ומה שלא עובד יורד. אני מעדיף חשבון שקט שמביא כסף על חשבון עמוס שמייצר מצגות.</p>
+      <p>חנויות אונליין שמודדות רווח, ועסקי שירות שמודדים פניות ועסקאות סגורות. בעברית ובאנגלית.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="soft" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>מה שכולם שואלים בשיחה הראשונה</h2>
+    </div>
+    <div class="faq-list">
+      <details open>
+        <summary>מה זה עולה?</summary>
+        <p>ריטיינר חודשי קבוע לפי היקף החשבון והעבודה, לא אחוז מתקציב המדיה. ככה אין לנו סיבה להגדיל לכם הוצאה שלא מחזירה. המספר נסגר אחרי פגישת הייעוץ, כשברור מה צריך.</p>
+      </details>
+      <details>
+        <summary>מה תקציב המדיה המינימלי?</summary>
+        <p>אין מספר קסם. עובדים עם חשבונות מכמה אלפי שקלים בחודש ועד מאות אלפים. מה שקובע הוא אם יש מספיק מכירות או פניות כדי למדוד שינוי. חשבון קטן עם מדידה נכונה עדיף על חשבון גדול בלי.</p>
+      </details>
+      <details>
+        <summary>החשבון שלי או שלכם?</summary>
+        <p>שלכם, תמיד. אנחנו מקבלים גישת ניהול, וכל ההיסטוריה, המודעות והנתונים נשארים בחשבון שלכם. אפשר להסיר אותנו בלחיצה, בכל רגע.</p>
+      </details>
+      <details>
+        <summary>מתי רואים שינוי?</summary>
+        <p>תיקונים במדידה ובמבנה בשבועיים הראשונים. שיפור שרואים במספרים, בדרך כלל בתוך ארבעה עד שמונה שבועות, תלוי בכמה מכירות או פניות יש בחשבון. ביום 30 יש לפני ואחרי, באותם מדדים.</p>
+      </details>
+      <details>
+        <summary>איך נראה הדיווח?</summary>
+        <p>בלי דוח שבועי שאף אחד לא קורא. שאלה בוואטסאפ נענית באותו יום, פעם בחודש יש סיכום קצר מול היעד, ודוח מלא נבנה כשצריך אותו. כשמשהו נשבר, אתם שומעים מאיתנו לפני שאתם מרגישים את זה.</p>
+      </details>
+      <details>
+        <summary>אתם עובדים גם עם סוכנויות?</summary>
+        <p>כן. חלק מהלקוחות מגיעים דרך סוכנויות שמעבירות אלינו את ניהול הגוגל של הלקוחות שלהן. הסוכנות מקבלת מנהל קמפיינים שמדווח לה, והקשר עם הלקוח נשאר שלה.</p>
+      </details>
+      <details>
+        <summary>מה עם Meta?</summary>
+        <p>כשזה נכון לעסק, כן, לרוב כקמפיין לידים או מכירה חוזרת לצד גוגל. הליבה שלנו היא Google Ads, ושם אנחנו הכי חזקים.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>נתחיל <span class="mk">בפגישת ייעוץ</span>, ללא עלות.</h2>
+      <p class="lead">נבדוק יחד את חשבון הגוגל שלכם, נגיד לכם מה היינו משנים ולמה, ותצאו עם תמונה ברורה. גם אם תבחרו להמשיך לבד.</p>
+      <div class="ways">
+        <div class="way" id="wa-row"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span>וואטסאפ: <a href="#contact" data-cta>שלחו הודעה</a></span></div>
+        <div class="way"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>אימייל: <a href="mailto:alumasagi82@gmail.com">alumasagi82@gmail.com</a></span></div>
+        <div class="way"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>תשובה באותו יום עבודה</span></div>
+      </div>
+    </div>
+    <form id="lead" novalidate>
+      <label for="f-name">שם<input id="f-name" name="name" type="text" autocomplete="name" placeholder="איך קוראים לך" required></label>
+      <label for="f-site">כתובת האתר<input id="f-site" name="site" type="text" inputmode="url" autocomplete="url" placeholder="www.example.co.il" required></label>
+      <label for="f-budget">תקציב מדיה חודשי משוער
+        <select id="f-budget" name="budget">
+          <option value="עד 10,000 ₪">עד 10,000 ₪</option>
+          <option value="10,000 עד 30,000 ₪" selected>10,000 עד 30,000 ₪</option>
+          <option value="30,000 עד 100,000 ₪">30,000 עד 100,000 ₪</option>
+          <option value="מעל 100,000 ₪">מעל 100,000 ₪</option>
+          <option value="עדיין אין קמפיין">עדיין אין קמפיין</option>
+        </select>
+      </label>
+      <label for="f-phone">טלפון<input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-0000000"></label>
+      <button class="btn btn-primary" type="submit" id="f-submit">לתיאום פגישה בוואטסאפ</button>
+      <small>הטופס פותח הודעה מוכנה. שום דבר לא נשמר באתר.</small>
+    </form>
+  </div>
+</section>
+
 </main>
 
 <footer>
   <div class="wrap">
-    Alumarketing, ישראל. <a href="/privacy.html">מדיניות פרטיות</a> · <a href="/privacy.html#en">Privacy policy</a>
+    <div>Alumarketing, ניהול חשבונות פרסום. 2026</div>
+    <nav aria-label="קישורים">
+      <a href="/privacy.html">מדיניות פרטיות</a>
+      <a href="#top">למעלה</a>
+    </nav>
   </div>
 </footer>
+
+<a class="fab" id="fab" href="#contact" aria-label="שלחו הודעת וואטסאפ" hidden>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+(function () {
+  // Contact details. WhatsApp: international format, digits only (972 + the number without the leading 0).
+  // Leave whatsapp empty and every button falls back to e-mail.
+  var CONTACT = { whatsapp: "", email: "alumasagi82@gmail.com" };
+
+  var greeting = "היי שגיא, אשמח לתאם פגישת ייעוץ על חשבון הפרסום שלנו.";
+  function link(text) {
+    if (CONTACT.whatsapp) return "https://wa.me/" + CONTACT.whatsapp + "?text=" + encodeURIComponent(text);
+    return "mailto:" + CONTACT.email + "?subject=" + encodeURIComponent("פגישת ייעוץ") + "&body=" + encodeURIComponent(text);
+  }
+  function go(text) {
+    var href = link(text);
+    if (CONTACT.whatsapp) { window.open(href, "_blank", "noopener"); } else { window.location.href = href; }
+  }
+
+  document.querySelectorAll("[data-cta]").forEach(function (a) {
+    a.setAttribute("href", link(greeting));
+    if (CONTACT.whatsapp) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); }
+  });
+  var waRow = document.getElementById("wa-row");
+  if (waRow && !CONTACT.whatsapp) waRow.hidden = true;
+  var fab = document.getElementById("fab");
+  if (fab && CONTACT.whatsapp) { fab.hidden = false; fab.setAttribute("href", link(greeting)); fab.setAttribute("target", "_blank"); fab.setAttribute("rel", "noopener"); }
+  var submit = document.getElementById("f-submit");
+  if (submit && !CONTACT.whatsapp) submit.textContent = "לתיאום פגישה במייל";
+
+  var form = document.getElementById("lead");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = new FormData(form);
+    var name = (f.get("name") || "").toString().trim();
+    var site = (f.get("site") || "").toString().trim();
+    var budget = (f.get("budget") || "").toString();
+    var phone = (f.get("phone") || "").toString().trim();
+    if (!name || !site) { form.reportValidity(); return; }
+    var text = "היי שגיא, אני " + name + ". האתר: " + site + ". תקציב חודשי: " + budget + "." + (phone ? " טלפון: " + phone + "." : "") + " אשמח לתאם פגישת ייעוץ.";
+    go(text);
+  });
+
+  // Counters in the proof strip
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var nums = document.querySelectorAll(".num[data-count]");
+  if (!reduce && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target; io.unobserve(el);
+        var to = parseFloat(el.getAttribute("data-count")); var pre = el.getAttribute("data-prefix") || ""; var suf = el.getAttribute("data-suffix") || "";
+        var t0 = null, dur = 1100;
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min(1, (ts - t0) / dur); p = 1 - Math.pow(1 - p, 3);
+          el.textContent = pre + Math.round(to * p) + suf;
+          if (p < 1) requestAnimationFrame(step); else el.textContent = pre + to + suf;
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.4 });
+    nums.forEach(function (n) { io.observe(n); });
+  }
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alumarketing Agency Automation</title>
+<meta name="description" content="Alumarketing Agency Automation: the internal application Alumarketing uses to manage its clients' Google Ads accounts. What it connects to, what it does, who uses it, and the privacy policy.">
+<link rel="canonical" href="https://alumarketing.co.il/app.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231A6DF0'/%3E%3Crect x='13' y='36' width='9' height='15' rx='2.5' fill='white'/%3E%3Crect x='26.5' y='27' width='9' height='24' rx='2.5' fill='white'/%3E%3Crect x='40' y='17' width='9' height='34' rx='2.5' fill='white'/%3E%3Ccircle cx='52' cy='12' r='4.5' fill='%23FFC626'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Heebo:wght@400;500;700&display=swap">
+<style>
+  :root { --bg: #fff; --bg-soft: #F4F7FC; --ink: #101828; --ink-2: #344054; --muted: #667085; --line: #E4E9F2; --blue: #1A6DF0; --blue-deep: #0B4FBF;
+    --font: "Heebo", "Rubik", "Segoe UI", Arial, sans-serif; --font-head: "Rubik", "Heebo", "Segoe UI", Arial, sans-serif; color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font); font-size: 17px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 800px; margin-inline: auto; padding-inline: 20px; }
+  .top { border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 16px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-head); font-weight: 700; font-size: 20px; color: var(--ink); }
+  .brand svg { width: 30px; height: 30px; flex: none; }
+  .top nav { display: flex; gap: 18px; }
+  .top nav a { color: var(--ink-2); text-decoration: none; font-size: 15px; }
+  .top nav a:hover { color: var(--blue); }
+  main { padding-block: 40px 64px; }
+  h1 { font-family: var(--font-head); font-size: clamp(28px, 4.5vw, 38px); line-height: 1.15; margin: 0 0 8px; }
+  h2 { font-family: var(--font-head); font-size: 21px; margin: 32px 0 8px; }
+  p, li { margin: 0 0 12px; color: var(--ink-2); }
+  ul { padding-inline-start: 22px; }
+  .meta { color: var(--muted); font-size: 15px; margin-bottom: 24px; }
+  .card { background: var(--bg-soft); border-radius: 18px; padding: 22px 24px; margin: 18px 0; }
+  a { color: var(--blue-deep); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .en { direction: ltr; text-align: left; border-top: 1px solid var(--line); margin-top: 48px; padding-top: 12px; }
+  footer { border-top: 1px solid var(--line); padding-block: 22px 40px; color: var(--muted); font-size: 14px; }
+  :focus-visible { outline: 3px solid #FFC626; outline-offset: 3px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Alumarketing, דף הבית">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1A6DF0"/><rect x="13" y="36" width="9" height="15" rx="2.5" fill="#fff"/><rect x="26.5" y="27" width="9" height="24" rx="2.5" fill="#fff"/><rect x="40" y="17" width="9" height="34" rx="2.5" fill="#fff"/><circle cx="52" cy="12" r="4.5" fill="#FFC626"/></svg>
+      Alumarketing
+    </a>
+    <nav><a href="/privacy.html">מדיניות פרטיות</a><a href="#en">English</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Alumarketing Agency Automation</h1>
+  <p class="meta">המערכת הפנימית של Alumarketing לניהול חשבונות Google Ads של לקוחות הסוכנות.</p>
+
+  <h2>מה זה</h2>
+  <p>Alumarketing היא סוכנות פרסום דיגיטלי בבעלות שגיא אלומה, שמנהלת חשבונות פרסום, בעיקר Google Ads, של חנויות אונליין ועסקי שירות. כדי לנהל כל חשבון באותה רמה כל יום, הסוכנות פיתחה מערכת פנימית.</p>
+  <div class="card">
+    <p>המערכת מתחברת דרך Google Ads API לחשבונות הלקוחות שהסוכנות מנהלת, באמצעות חשבון המנהל (MCC) של הסוכנות, ועושה שלושה דברים:</p>
+    <ul>
+      <li><strong>קוראת</strong> נתוני ביצועים מדי יום: הוצאה, קליקים, המרות, מונחי חיפוש, מצב פידים ומודעות.</li>
+      <li><strong>מנטרת</strong> תקציבים, יעדים, סטיות וחריגות, ומתריעה כשמשהו דורש החלטה.</li>
+      <li><strong>מבצעת</strong> שינויים בתוך מדיניות שנקבעה מראש עם הלקוח: תקציבים, יעדי הצעה, מילות מפתח שליליות, מודעות. כל שינוי נמדד אחר כך ומבוטל אם התוצאה נפלה.</li>
+    </ul>
+  </div>
+
+  <h2>מי משתמש</h2>
+  <p>הסוכנות בלבד, על חשבונות של לקוחות שנתנו לה גישה. אין הרשמה ציבורית, אין משתמשים חיצוניים, והנתונים לא נמכרים ולא משמשים לפרסום לצד שלישי. הפרטים המלאים ב<a href="/privacy.html">מדיניות הפרטיות</a>.</p>
+
+  <h2>יצירת קשר</h2>
+  <p>שגיא אלומה, Alumarketing. דוא"ל: <a href="mailto:alumasagi82@gmail.com">alumasagi82@gmail.com</a></p>
+
+  <section class="en" id="en">
+    <h1>Alumarketing Agency Automation</h1>
+    <p class="meta">The internal application Alumarketing uses to manage its clients' Google Ads accounts.</p>
+
+    <h2>What it is</h2>
+    <p>Alumarketing is a digital advertising agency owned by Sagi Aluma, managing advertising accounts, Google Ads first, for online stores and service businesses. To run every account to the same standard every day, the agency built an internal application.</p>
+    <div class="card">
+      <p>Through the Google Ads API it connects to the client accounts the agency manages, under the agency's manager account (MCC), and does three things:</p>
+      <ul>
+        <li><strong>Reads</strong> performance data daily: spend, clicks, conversions, search terms, feed and ad status.</li>
+        <li><strong>Monitors</strong> budgets, targets and anomalies, and raises what needs a decision.</li>
+        <li><strong>Applies</strong> changes inside a policy agreed with each client: budgets, bid targets, negative keywords, ads. Every change is measured afterwards and reverted if results fall.</li>
+      </ul>
+    </div>
+
+    <h2>Who uses it</h2>
+    <p>The agency only, on accounts whose owners granted it access. There is no public sign-up and no external user. Data is not sold and not used for third-party advertising. Details are in the <a href="/privacy.html#en">privacy policy</a>.</p>
+
+    <h2>Contact</h2>
+    <p>Sagi Aluma, Alumarketing. E-mail: <a href="mailto:alumasagi82@gmail.com">alumasagi82@gmail.com</a></p>
+  </section>
+</main>
+
+<footer><div class="wrap">Alumarketing · <a href="/privacy.html">מדיניות פרטיות</a> · <a href="/privacy.html#en">Privacy policy</a></div></footer>
+</body>
+</html>

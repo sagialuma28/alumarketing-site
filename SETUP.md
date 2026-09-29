@@ -1,7 +1,23 @@
 # alumarketing.co.il: from zero to a verified domain
 
-Two files make the site (`index.html`, `privacy.html`); `CNAME` tells GitHub Pages the
-domain. Everything below is in the order it has to happen. Sagi's steps carry his name.
+The site is `index.html` (the agency page, rebuilt 29 Sep 2026), `privacy.html` and
+`app.html`, plus `robots.txt` and `sitemap.xml`; `CNAME` tells GitHub Pages the domain.
+Everything below is in the order it has to happen. Sagi's steps carry his name.
+
+## Contact details on the page
+
+The WhatsApp number and the e-mail sit in one place, the `CONTACT` object at the top of the
+script at the bottom of `index.html`. WhatsApp is international format, digits only
+(`972` + the number without the leading 0). While it is empty every button falls back to
+e-mail and the WhatsApp bubble stays hidden. The form saves nothing: it opens a prepared
+WhatsApp message (or an e-mail) with the name, site, budget and phone the lead typed.
+
+The marketing page says nothing about the automation (Sagi, 29 Sep: clients do not need to
+know). Google's brand verification reads `app.html` instead: the description of Alumarketing
+Agency Automation, its heading equal to the app name in the Cloud project, linking
+`privacy.html`. That URL, `https://alumarketing.co.il/app.html`, goes in the Branding form's
+"Application home page" field (step 5). The page is not linked from `index.html`, only from
+the privacy policy.
 
 ## 1. Register the domain (Sagi, 10 minutes)
 
@@ -67,7 +83,7 @@ https://console.cloud.google.com/auth/branding?project=alumarketing-agency-autom
 | App name | Alumarketing Agency Automation |
 | User support email | alumasagi82@gmail.com |
 | App logo | optional; skip |
-| Application home page | https://alumarketing.co.il/ |
+| Application home page | https://alumarketing.co.il/app.html |
 | Application privacy policy link | https://alumarketing.co.il/privacy.html |
 | Application terms of service link | leave empty |
 | Authorized domains | alumarketing.co.il |
