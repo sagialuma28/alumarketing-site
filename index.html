@@ -251,7 +251,18 @@
   input:focus, select:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(26,109,240,.15); }
   input::placeholder { color: #98A2B3; }
   form .btn { width: 100%; margin-top: 4px; }
+  form[hidden] { display: none; }
+  form .btn[disabled] { opacity: .7; cursor: wait; transform: none; }
   form small { color: var(--muted); font-size: 12.5px; text-align: center; }
+  form small.err { color: #B42318; }
+  .honey { position: absolute; left: -9999px; width: 0; height: 0; opacity: 0; }
+  .sent { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 36px 26px; text-align: center; box-shadow: var(--shadow); }
+  .sent[hidden] { display: none; }
+  .sent .ck { width: 58px; height: 58px; border-radius: 50%; background: var(--green-soft); color: var(--green); display: grid; place-items: center; margin: 0 auto 14px; }
+  .sent .ck svg { width: 28px; height: 28px; }
+  .sent h3 { font-size: 24px; margin-bottom: 8px; }
+  .sent p { color: var(--ink-2); }
+  .sent a { color: var(--blue-deep); }
 
   /* Footer */
   footer { border-top: 1px solid var(--line); padding-block: 26px 40px; color: var(--muted); font-size: 14px; }
@@ -690,22 +701,30 @@
         <div class="way"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>תשובה באותו יום עבודה</span></div>
       </div>
     </div>
-    <form id="lead" novalidate>
-      <label for="f-name">שם<input id="f-name" name="name" type="text" autocomplete="name" placeholder="איך קוראים לך" required></label>
-      <label for="f-site">כתובת האתר<input id="f-site" name="site" type="text" inputmode="url" autocomplete="url" placeholder="www.example.co.il" required></label>
-      <label for="f-budget">תקציב מדיה חודשי משוער
-        <select id="f-budget" name="budget">
-          <option value="עד 10,000 ₪">עד 10,000 ₪</option>
-          <option value="10,000 עד 30,000 ₪" selected>10,000 עד 30,000 ₪</option>
-          <option value="30,000 עד 100,000 ₪">30,000 עד 100,000 ₪</option>
-          <option value="מעל 100,000 ₪">מעל 100,000 ₪</option>
-          <option value="עדיין אין קמפיין">עדיין אין קמפיין</option>
-        </select>
-      </label>
-      <label for="f-phone">טלפון<input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-0000000"></label>
-      <button class="btn btn-primary" type="submit" id="f-submit">לתיאום פגישה בוואטסאפ</button>
-      <small>הטופס פותח הודעה מוכנה. שום דבר לא נשמר באתר.</small>
-    </form>
+    <div>
+      <form id="lead" novalidate>
+        <label for="f-name">שם<input id="f-name" name="name" type="text" autocomplete="name" placeholder="איך קוראים לך" required></label>
+        <label for="f-phone">טלפון<input id="f-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="050-0000000" required></label>
+        <label for="f-site">כתובת האתר<input id="f-site" name="site" type="text" inputmode="url" autocomplete="url" placeholder="www.example.co.il"></label>
+        <label for="f-budget">תקציב מדיה חודשי משוער
+          <select id="f-budget" name="budget">
+            <option value="עד 10,000 ₪">עד 10,000 ₪</option>
+            <option value="10,000 עד 30,000 ₪" selected>10,000 עד 30,000 ₪</option>
+            <option value="30,000 עד 100,000 ₪">30,000 עד 100,000 ₪</option>
+            <option value="מעל 100,000 ₪">מעל 100,000 ₪</option>
+            <option value="עדיין אין קמפיין">עדיין אין קמפיין</option>
+          </select>
+        </label>
+        <input class="honey" type="text" name="_honey" id="f-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn btn-primary" type="submit" id="f-submit">לתיאום פגישת ייעוץ</button>
+        <small id="f-note">הפרטים מגיעים ישירות לשגיא. תשובה באותו יום עבודה.</small>
+      </form>
+      <div class="sent" id="lead-sent" hidden>
+        <div class="ck" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+        <h3>הפרטים אצלנו.</h3>
+        <p>שגיא יחזור אליכם באותו יום עבודה. <a id="sent-wa" href="#contact" hidden>רוצים לזרז? שלחו הודעה בוואטסאפ.</a></p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -749,20 +768,44 @@
   if (waRow && !CONTACT.whatsapp) waRow.hidden = true;
   var fab = document.getElementById("fab");
   if (fab && CONTACT.whatsapp) { fab.hidden = false; fab.setAttribute("href", link(greeting)); fab.setAttribute("target", "_blank"); fab.setAttribute("rel", "noopener"); }
-  var submit = document.getElementById("f-submit");
-  if (submit && !CONTACT.whatsapp) submit.textContent = "לתיאום פגישה במייל";
-
+  // The form posts to FormSubmit.co, which e-mails the lead to CONTACT.email (the address
+  // has to be activated once, from the e-mail FormSubmit sends on the first submission).
+  // If that fails for any reason, the lead is not lost: a prepared message opens instead.
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/" + CONTACT.email;
   var form = document.getElementById("lead");
+  var sent = document.getElementById("lead-sent");
+  var note = document.getElementById("f-note");
+  function showSent() {
+    form.hidden = true; sent.hidden = false;
+    var wa = document.getElementById("sent-wa");
+    if (wa && CONTACT.whatsapp) { wa.hidden = false; wa.setAttribute("href", link(greeting)); wa.setAttribute("target", "_blank"); wa.setAttribute("rel", "noopener"); }
+    sent.scrollIntoView({ block: "nearest" });
+  }
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     var f = new FormData(form);
     var name = (f.get("name") || "").toString().trim();
+    var phone = (f.get("phone") || "").toString().trim();
     var site = (f.get("site") || "").toString().trim();
     var budget = (f.get("budget") || "").toString();
-    var phone = (f.get("phone") || "").toString().trim();
-    if (!name || !site) { form.reportValidity(); return; }
-    var text = "היי שגיא, אני " + name + ". האתר: " + site + ". תקציב חודשי: " + budget + "." + (phone ? " טלפון: " + phone + "." : "") + " אשמח לתאם פגישת ייעוץ.";
-    go(text);
+    if ((f.get("_honey") || "").toString()) return;
+    if (!name || !phone) { form.reportValidity(); return; }
+    var btn = document.getElementById("f-submit"); var label = btn.textContent;
+    btn.disabled = true; btn.textContent = "שולח...";
+    var fallback = "היי שגיא, אני " + name + ". טלפון: " + phone + "." + (site ? " האתר: " + site + "." : "") + " תקציב חודשי: " + budget + ". אשמח לתאם פגישת ייעוץ.";
+    var payload = { "name": name, "phone": phone, "site": site || "-", "budget": budget, "page": location.href,
+      "_subject": "ליד חדש מהאתר: " + name, "_template": "table", "_captcha": "false" };
+    fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (res.ok && res.d && String(res.d.success) === "true") { showSent(); return; }
+        throw new Error((res.d && res.d.message) || ("HTTP " + res.ok));
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = label;
+        if (note) { note.textContent = "השליחה מהדף לא הצליחה. נפתחה לכם הודעה מוכנה, אפשר לשלוח אותה כמו שהיא."; note.className = "err"; }
+        go(fallback);
+      });
   });
 
   // Counters in the proof strip
