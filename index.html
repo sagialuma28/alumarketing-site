@@ -13,10 +13,13 @@
 <meta property="og:title" content="Alumarketing | יותר מכירות ולידים מכל שקל בפרסום">
 <meta property="og:description" content="ניהול חשבונות פרסום עם התמחות ב-Google Ads. יעד במספרים, עבודה יומיומית על החשבון, ליווי אישי. פגישת ייעוץ ללא עלות.">
 <meta property="og:url" content="https://alumarketing.co.il/">
-<meta property="og:image" content="https://alumarketing.co.il/sagi.jpg">
-<meta property="og:image:width" content="800">
-<meta property="og:image:height" content="800">
-<meta property="og:image:alt" content="שגיא אלומה, Alumarketing">
+<meta property="og:image" content="https://alumarketing.co.il/logo/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alumarketing">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="apple-touch-icon" href="/logo/alumarketing-profile-1024.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231A6DF0'/%3E%3Crect x='13' y='36' width='9' height='15' rx='2.5' fill='white'/%3E%3Crect x='26.5' y='27' width='9' height='24' rx='2.5' fill='white'/%3E%3Crect x='40' y='17' width='9' height='34' rx='2.5' fill='white'/%3E%3Ccircle cx='52' cy='12' r='4.5' fill='%23FFC626'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,8 +83,8 @@
   /* Nav */
   .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
   .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
-  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-head); font-weight: 700; font-size: 21px; color: var(--ink); }
-  .brand svg { width: 32px; height: 32px; flex: none; }
+  .brand { display: inline-flex; align-items: center; text-decoration: none; }
+  .brand img { height: 40px; width: auto; display: block; }
   .nav-links { display: flex; gap: 26px; }
   .nav-links a { color: var(--ink-2); text-decoration: none; font-size: 15.5px; font-weight: 500; white-space: nowrap; }
   .nav-links a:hover { color: var(--blue); }
@@ -272,6 +275,8 @@
   footer { border-top: 1px solid var(--line); padding-block: 26px 40px; color: var(--muted); font-size: 14px; }
   footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; align-items: center; }
   footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+  .foot-brand { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .foot-brand img { height: 26px; width: auto; display: block; }
   footer a { color: var(--ink-2); text-decoration: none; }
   footer a:hover { color: var(--blue); }
 
@@ -300,7 +305,7 @@
     body { font-size: 16px; }
     .nav-links { display: none; }
     .nav .wrap { height: 62px; }
-    .brand { font-size: 19px; }
+    .brand img { height: 32px; }
     .proof-grid, .how, .case-grid, .steps { grid-template-columns: 1fr; }
     .tile { border-inline-start: 0; border-top: 1px solid var(--line); padding: 22px 4px; }
     .tile:first-child { border-top: 0; }
@@ -330,8 +335,7 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Alumarketing, לתחילת הדף">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1A6DF0"/><rect x="13" y="36" width="9" height="15" rx="2.5" fill="#fff"/><rect x="26.5" y="27" width="9" height="24" rx="2.5" fill="#fff"/><rect x="40" y="17" width="9" height="34" rx="2.5" fill="#fff"/><circle cx="52" cy="12" r="4.5" fill="#FFC626"/></svg>
-      Alumarketing
+      <img src="/logo/alumarketing-logo.png" alt="Alumarketing" width="2694" height="560">
     </a>
     <nav class="nav-links" aria-label="ניווט">
       <a href="#how">איך זה עובד</a>
@@ -736,7 +740,7 @@
 
 <footer>
   <div class="wrap">
-    <div>Alumarketing, ניהול חשבונות פרסום. 2026</div>
+    <div class="foot-brand"><img src="/logo/alumarketing-logo.png" alt="Alumarketing" width="2694" height="560"><span>ניהול חשבונות פרסום. 2026</span></div>
     <nav aria-label="קישורים">
       <a href="/privacy.html">מדיניות פרטיות</a>
       <a href="#top">למעלה</a>
