@@ -768,10 +768,33 @@
   if (waRow && !CONTACT.whatsapp) waRow.hidden = true;
   var fab = document.getElementById("fab");
   if (fab && CONTACT.whatsapp) { fab.hidden = false; fab.setAttribute("href", link(greeting)); fab.setAttribute("target", "_blank"); fab.setAttribute("rel", "noopener"); }
-  // The form posts to FormSubmit.co, which e-mails the lead to CONTACT.email (the address
-  // has to be activated once, from the e-mail FormSubmit sends on the first submission).
-  // If that fails for any reason, the lead is not lost: a prepared message opens instead.
+  // Where a lead goes, in order: Web3Forms (needs the access key below, issued to CONTACT.email),
+  // then FormSubmit.co (the address is activated once from the e-mail it sends on the first
+  // submission), and if both fail the lead is not lost: a prepared message opens instead.
+  var WEB3FORMS_KEY = "";
   var FORM_ENDPOINT = "https://formsubmit.co/ajax/" + CONTACT.email;
+  function postJSON(url, payload) {
+    return fetch(url, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) })
+      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
+      .then(function (res) {
+        if (res.ok && res.d && String(res.d.success) === "true") return true;
+        throw new Error((res.d && res.d.message) || "send failed");
+      });
+  }
+  function sendLead(fields, subject) {
+    var chain = [];
+    if (WEB3FORMS_KEY) chain.push(function () {
+      var p = { access_key: WEB3FORMS_KEY, subject: subject, from_name: "Alumarketing site", botcheck: "" };
+      for (var k in fields) p[k] = fields[k];
+      return postJSON("https://api.web3forms.com/submit", p);
+    });
+    chain.push(function () {
+      var p = { _subject: subject, _template: "table", _captcha: "false" };
+      for (var k in fields) p[k] = fields[k];
+      return postJSON(FORM_ENDPOINT, p);
+    });
+    return chain.reduce(function (prev, next) { return prev.catch(next); }, Promise.reject(new Error("start")));
+  }
   var form = document.getElementById("lead");
   var sent = document.getElementById("lead-sent");
   var note = document.getElementById("f-note");
@@ -793,14 +816,9 @@
     var btn = document.getElementById("f-submit"); var label = btn.textContent;
     btn.disabled = true; btn.textContent = "שולח...";
     var fallback = "היי שגיא, אני " + name + ". טלפון: " + phone + "." + (site ? " האתר: " + site + "." : "") + " תקציב חודשי: " + budget + ". אשמח לתאם פגישת ייעוץ.";
-    var payload = { "name": name, "phone": phone, "site": site || "-", "budget": budget, "page": location.href,
-      "_subject": "ליד חדש מהאתר: " + name, "_template": "table", "_captcha": "false" };
-    fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) })
-      .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, d: d }; }); })
-      .then(function (res) {
-        if (res.ok && res.d && String(res.d.success) === "true") { showSent(); return; }
-        throw new Error((res.d && res.d.message) || ("HTTP " + res.ok));
-      })
+    var fields = { "name": name, "phone": phone, "site": site || "-", "budget": budget, "page": location.href };
+    sendLead(fields, "ליד חדש מהאתר: " + name)
+      .then(function () { showSent(); })
       .catch(function () {
         btn.disabled = false; btn.textContent = label;
         if (note) { note.textContent = "השליחה מהדף לא הצליחה. נפתחה לכם הודעה מוכנה, אפשר לשלוח אותה כמו שהיא."; note.className = "err"; }

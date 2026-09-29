@@ -9,8 +9,15 @@ Everything below is in the order it has to happen. Sagi's steps carry his name.
 The WhatsApp number and the e-mail sit in one place, the `CONTACT` object at the top of the
 script at the bottom of `index.html`. WhatsApp is international format, digits only
 (`972` + the number without the leading 0). While it is empty every button falls back to
-e-mail and the WhatsApp bubble stays hidden. The form saves nothing: it opens a prepared
-WhatsApp message (or an e-mail) with the name, site, budget and phone the lead typed.
+e-mail and the WhatsApp bubble stays hidden.
+
+The lead form e-mails the lead to `CONTACT.email` through a chain, first one that works
+wins: Web3Forms (`WEB3FORMS_KEY` in the same script; the key is issued to that e-mail at
+web3forms.com, free, 250 a month), then FormSubmit.co (no key; the address is activated once
+by clicking the link in the e-mail FormSubmit sends on the first successful submission), and
+if both fail a prepared message opens in the lead's mail app, so nothing is lost. On 29 Sep
+2026 FormSubmit returned 500 for every address for hours, which is why the key exists.
+The privacy page names the form service.
 
 The marketing page says nothing about the automation (Sagi, 29 Sep: clients do not need to
 know). Google's brand verification reads `app.html` instead: the description of Alumarketing
