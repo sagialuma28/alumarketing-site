@@ -33,7 +33,15 @@ Regenerate the file with a real GA4 id, from this folder:
 `python make_gtm_container.py G-XXXXXXXXXX gtm_import_alumarketing.json`
 (the constant can also be edited in the container after the import).
 
-## Going live, in order
+## Status
+
+Live since 29 Sep 2026: container GTM-KNNFZGHV on every page, GA4 property G-QH72YD692B
+inside it. Verified from the live site: page_view, whatsapp_click and generate_lead reach
+google-analytics.com with their parameters. GA4 batches events for a few seconds, so a hit can
+show up on the next event rather than at once. A browser that loaded the site before a container
+publish keeps the old container for up to 15 minutes (gtm.js cache); a hard reload fixes it.
+
+## Going live, in order (done, kept for the next site)
 
 1. analytics.google.com: create the account (Alumarketing) and a GA4 property
    (alumarketing.co.il), web data stream, copy the Measurement ID (G-...).
