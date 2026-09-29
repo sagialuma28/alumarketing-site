@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 240" width="1180" height="240" role="img" aria-label="Alumarketing">
+  <!-- For dark backgrounds. Wordmark: Rubik Bold. -->
+  <g transform="translate(0 28) scale(2.875)">
+    <rect width="64" height="64" rx="16" fill="#1A6DF0"/>
+    <rect x="13" y="36" width="9" height="15" rx="2.5" fill="#FFFFFF"/>
+    <rect x="26.5" y="27" width="9" height="24" rx="2.5" fill="#FFFFFF"/>
+    <rect x="40" y="17" width="9" height="34" rx="2.5" fill="#FFFFFF"/>
+    <circle cx="52" cy="12" r="4.5" fill="#FFC626"/>
+  </g>
+  <text x="232" y="166" font-family="Rubik, Heebo, Arial, sans-serif" font-weight="700" font-size="150" letter-spacing="-2" fill="#FFFFFF">Alumarketing</text>
+</svg>
