@@ -4,6 +4,16 @@ The site is `index.html` (the agency page, rebuilt 29 Sep 2026), `privacy.html` 
 `app.html`, plus `robots.txt` and `sitemap.xml`; `CNAME` tells GitHub Pages the domain.
 Everything below is in the order it has to happen. Sagi's steps carry his name.
 
+## Logo and link preview
+
+`logo/` holds the brand: SVG mark and wordmark (the wordmark needs the Rubik font, so print
+from the PNGs), PNG exports (horizontal, on white, white text, stacked, mark, profile
+picture) and `og-image.png`, the 1200x630 picture behind a shared link. The stacked logo sits
+inside the centre square of that picture on purpose: WhatsApp on desktop crops previews to
+a square, and a wide logo lost both ends (29 Sep). WhatsApp caches a preview per URL for
+days; to see a new one, share the link with a changed query, `?v=3` and so on. The nav and
+footer use `logo/alumarketing-logo.png`; `sagi.jpg` is the portrait in the about section.
+
 ## Contact details on the page
 
 The WhatsApp number and the e-mail sit in one place, the `CONTACT` object at the top of the
