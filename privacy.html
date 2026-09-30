@@ -7,15 +7,22 @@
 <meta name="description" content="מדיניות הפרטיות של Alumarketing ושל מערכת Alumarketing Agency Automation: אילו נתוני Google נקראים, איך הם נשמרים, עם מי הם משותפים ואיך מבטלים גישה.">
 <link rel="canonical" href="https://alumarketing.co.il/privacy.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231A6DF0'/%3E%3Crect x='13' y='36' width='9' height='15' rx='2.5' fill='white'/%3E%3Crect x='26.5' y='27' width='9' height='24' rx='2.5' fill='white'/%3E%3Crect x='40' y='17' width='9' height='34' rx='2.5' fill='white'/%3E%3Ccircle cx='52' cy='12' r='4.5' fill='%23FFC626'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Heebo:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <script>
   window.GTM_ID = "GTM-KNNFZGHV";
   window.dataLayer = window.dataLayer || [];
-  (function (w, d, s, l, i) { if (!i) return; w[l] = w[l] || []; w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-    var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = "https://www.googletagmanager.com/gtm.js?id=" + i; f.parentNode.insertBefore(j, f);
-  })(window, document, "script", "dataLayer", window.GTM_ID);
+  (function (w, d, i) {
+    if (!i) return;
+    var done = false;
+    function load() {
+      if (done) return; done = true;
+      w.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var j = d.createElement("script"); j.async = true; j.src = "https://www.googletagmanager.com/gtm.js?id=" + i;
+      d.head.appendChild(j);
+    }
+    ["pointerdown", "touchstart", "keydown", "scroll", "mousemove"].forEach(function (e) { w.addEventListener(e, load, { passive: true, once: true }); });
+    w.addEventListener("load", function () { setTimeout(load, 3000); });
+  })(window, document, window.GTM_ID);
 </script>
 <style>
   :root { --bg: #fff; --ink: #101828; --ink-2: #344054; --muted: #667085; --line: #E4E9F2; --blue: #1A6DF0; --blue-deep: #0B4FBF;
@@ -48,7 +55,7 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="/" aria-label="Alumarketing, דף הבית">
-      <img src="/logo/alumarketing-logo.png" alt="Alumarketing" width="2694" height="560" style="height:36px;width:auto;display:block">
+      <img src="/logo/alumarketing-logo-nav.png" alt="Alumarketing" width="600" height="125" style="height:36px;width:auto;display:block">
     </a>
     <nav><a href="/">דף הבית</a><a href="#en">English</a></nav>
   </div>
